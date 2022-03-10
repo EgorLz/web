@@ -14,8 +14,8 @@ def index():
     return "И на Марсе будут яблони цвести!"
 
 
-@app.route('/promotion')
-def promotion():
+@app.route('/promotion_image')
+def promotion_image():
     return """Человечество вырастает из детства. </br>
 
     Человечеству мала одна планета.</br>
@@ -30,10 +30,15 @@ def promotion():
 
 @app.route("/image_mars")
 def image_mars():
-    return f'''<title>Привет, Марс!</title>
-                Жди нас, Марс! </br>
+    return f''' <head>
+                    <meta charset="UTF-8">
+                    <title>Привет, Марс!</title>
+                </head>
+                <h1>Жди нас, Марс!</h1> </br>
                 <img src="{url_for('static', filename='image/mars.jpg')}" 
-                    alt="здесь должна была быть картинка, но не нашлась">'''
+                    alt="здесь должна была быть картинка, но не нашлась"></br>  
+                Вот она красная планета'''
+
 
 
 if __name__ == '__main__':
